@@ -128,8 +128,8 @@ export default function AniseKyotoHP() {
             </p>
           </div>
           <ul className="space-y-3 text-sm font-bold">
-            <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400" /> 毎週木曜 20:00 (向日市)</li>
-            <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400" /> 年会費 20,000円</li>
+            <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400" /> 練習 毎週木曜 20:00 (向日市)</li>
+            <li className="flex items-center gap-3"><span className="w-2 h-2 bg-yellow-400" /> 年会費 24,000円</li>
           </ul>
         </div>
       </section>
