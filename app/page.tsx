@@ -157,19 +157,54 @@ export default function AniseKyotoHP() {
       </section>
 
       {/* --- CONTACT FORM --- */}
-      <section id="contact" className="py-24 px-8 bg-[#001020]">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-black italic tracking-tighter underline decoration-yellow-400 underline-offset-8">CONTACT</h2>
-        </div>
-        <form className="space-y-8">
-          <input type="text" className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" placeholder="NAME" />
-          <input type="email" className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" placeholder="EMAIL" />
-          <textarea rows={4} className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" placeholder="MESSAGE"></textarea>
-          <button className="w-full bg-white text-[#001830] py-5 font-black text-xl active:bg-yellow-400 transition-colors">
-            SEND TO ANISE
-          </button>
-        </form>
-      </section>
+{/* --- CONTACT FORM --- */}
+<section id="contact" className="py-24 px-8 bg-[#001020]">
+  <div className="text-center mb-12">
+    <h2 className="text-4xl font-black italic tracking-tighter underline decoration-yellow-400 underline-offset-8">CONTACT</h2>
+  </div>
+  
+  {/* SSGform用の設定 */}
+  <form 
+    action="https://ssgform.com/s/RfIwNRZIH9WN" 
+    method="post" 
+    className="space-y-8"
+  >
+    {/* name属性が管理画面の項目名になります */}
+    <input 
+      type="text" 
+      name="お名前" 
+      required 
+      className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" 
+      placeholder="NAME" 
+    />
+    <input 
+      type="email" 
+      name="メールアドレス" 
+      required 
+      className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" 
+      placeholder="EMAIL" 
+    />
+    <textarea 
+      name="お問い合わせ内容" 
+      rows={4} 
+      required 
+      className="w-full bg-transparent border-b-2 border-white/20 py-2 outline-none focus:border-yellow-400 transition-colors" 
+      placeholder="MESSAGE"
+    ></textarea>
+
+    {/* bot対策（任意ですがSSGform推奨設定） */}
+    <div style={{ display: 'none' }}>
+      <input type="text" name="ssg_honeypot" />
+    </div>
+
+    <button 
+      type="submit" 
+      className="w-full bg-white text-[#001830] py-5 font-black text-xl active:bg-yellow-400 transition-colors"
+    >
+      SEND TO ANISE
+    </button>
+  </form>
+</section>
 
       <footer className="py-12 bg-black text-center border-t border-white/5">
         <p className="text-[10px] tracking-[0.3em] text-gray-500 uppercase font-bold">
